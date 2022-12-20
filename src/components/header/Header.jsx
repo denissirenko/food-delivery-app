@@ -29,7 +29,7 @@ export const Header = () => {
   const menuRef = useRef(null);
   const headerRef = useRef(null);
 
-  const toggleMenu = (e) => {
+  const toggleMenu = () => {
     menuRef.current.classList.toggle('show__menu');
   };
 
@@ -58,7 +58,7 @@ export const Header = () => {
             <h5>Tasty Treat</h5>
           </div>
 
-          <div className="navigation" ref={menuRef} onClick={(e) => toggleMenu(e)}>
+          <div className="navigation" ref={menuRef} onClick={toggleMenu}>
             <div className="menu d-flex align-items-center gap-5">
               {nav__links.map((item, index) => (
                 <NavLink
@@ -83,7 +83,7 @@ export const Header = () => {
               </Link>
             </span>
 
-            <span className="mobile__menu" onClick={(e) => toggleMenu(e)}>
+            <span className="mobile__menu" onClick={toggleMenu}>
               <i className="ri-menu-line"></i>
             </span>
           </div>

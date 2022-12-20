@@ -6,13 +6,13 @@ import Routes from '../../routes/Routers';
 
 const Layout = () => {
   return (
-    <div>
+    <>
       <Header />
-      <div>
+      <main>
         <Routes />
-      </div>
+      </main>
       <Footer />
-    </div>
+    </>
   );
 };
 
